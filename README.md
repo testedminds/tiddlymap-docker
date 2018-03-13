@@ -2,7 +2,7 @@
 
 Run TiddlyWiki 5 with TiddlyMap via Docker.
 
-Includes a example wiki with plugins configured:
+Includes an example wiki with plugins configured:
 
 * https://github.com/felixhayashi/TW5-TiddlyMap
 

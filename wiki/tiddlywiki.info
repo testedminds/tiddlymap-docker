@@ -3,7 +3,11 @@
     "plugins": [
         "tiddlywiki/tiddlyweb",
         "tiddlywiki/filesystem",
-        "tiddlywiki/highlight"
+        "tiddlywiki/highlight",
+        "felixhayashi/tiddlymap",
+        "felixhayashi/vis",
+        "felixhayashi/hotzone",
+        "felixhayashi/topstoryview"
     ],
     "themes": [
         "tiddlywiki/vanilla",

@@ -9,6 +9,12 @@ WORKDIR /var/lib/tiddlywiki
 # Add init-and-run script
 ADD init-and-run-wiki.sh /usr/local/bin/init-and-run-wiki.sh
 
+# Install plugins
+ADD plugins/TW5-HotZone/dist/felixhayashi/hotzone /usr/local/lib/node_modules/tiddlywiki/plugins/felixhayashi/hotzone
+ADD plugins/TW5-Vis.js/dist/felixhayashi/vis /usr/local/lib/node_modules/tiddlywiki/plugins/felixhayashi/vis
+ADD plugins/TW5-TopStoryView/dist/felixhayashi/topstoryview /usr/local/lib/node_modules/tiddlywiki/plugins/felixhayashi/topstoryview
+ADD plugins/TW5-TiddlyMap/dist/felixhayashi/tiddlymap /usr/local/lib/node_modules/tiddlywiki/plugins/felixhayashi/tiddlymap
+
 # Meta
 CMD ["/usr/local/bin/init-and-run-wiki.sh"]
 EXPOSE 8080

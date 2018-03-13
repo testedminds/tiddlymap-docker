@@ -25,7 +25,7 @@ run:
 	docker run -d -p 8080:8080 -v `pwd`/wiki:/var/lib/tiddlywiki/wiki -e PORT=8080 --rm --name $(name) $(latest)
 
 exec:
-	docker exec -it $(name) bash
+	docker exec -it $(name) sh
 
 stop:
 	-docker stop $(name)

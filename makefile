@@ -24,6 +24,10 @@ build:
 run:
 	docker run -d -p 8080:8080 -v `pwd`/wiki:/var/lib/tiddlywiki/wiki -e PORT=8080 --rm --name $(name) $(latest)
 
+# run a container without mounting the local volume so that any changes to the wiki are scoped to the container:
+test:
+	docker run -d -p 8080:8080 -e PORT=8080 --rm --name $(name) $(latest)
+
 exec:
 	docker exec -it $(name) sh
 

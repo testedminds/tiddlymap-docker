@@ -15,6 +15,9 @@ ADD plugins/TW5-Vis.js/dist/felixhayashi/vis /usr/local/lib/node_modules/tiddlyw
 ADD plugins/TW5-TopStoryView/dist/felixhayashi/topstoryview /usr/local/lib/node_modules/tiddlywiki/plugins/felixhayashi/topstoryview
 ADD plugins/TW5-TiddlyMap/dist/felixhayashi/tiddlymap /usr/local/lib/node_modules/tiddlywiki/plugins/felixhayashi/tiddlymap
 
+# Copy default wiki
+ADD wiki /var/lib/tiddlywiki/wiki
+
 # Meta
 CMD ["/usr/local/bin/init-and-run-wiki.sh"]
 EXPOSE 8080

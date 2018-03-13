@@ -11,6 +11,8 @@ if [ -n "$NODE_MEM" ]; then
 fi
 
 if [ ! -f /var/lib/tiddlywiki/wiki/tiddlywiki.info ]; then
+  # Handle the case where a volume is mounted without an initialized wiki.
+  # Note that plugins will NOT be configured by default.
   echo "Initializing new wiki in server mode..."
   /usr/bin/env node $NODEJS_V8_ARGS $tiddlywiki_script wiki --init server
 fi
